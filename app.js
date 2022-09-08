@@ -49,8 +49,8 @@ app.use('/api',bookRoutes)
 
 
  /*********************DataBase Connection************************/
-
-  mongoose.connect('mongodb+srv://Admin:pAtDPU11F7zogugM@cluster0.tehth5j.mongodb.net/?retryWrites=true&w=majority',{dbName:'BookLibDB',useUnifiedTopology:true,useNewUrlParser:true,useCreateIndex: true},()=>{
+let mongoURI = 'mongodb+srv://Admin:<password>@cluster0.tehth5j.mongodb.net/?retryWrites=true&w=majority';
+  mongoose.connect(mongoURI,{dbName:'BookLibDB',useUnifiedTopology:true,useNewUrlParser:true,useCreateIndex: true},()=>{
   try {
     console.log('DB is connected ');
   } catch (error) {
